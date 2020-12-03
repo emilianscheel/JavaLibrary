@@ -52,7 +52,6 @@ Required for the Item Class is ...
 * a empty "Constructor" and a full "Constructor"
 * Getter and Setter for every String, Integer, Long, ...
 ```
-
 public class UserItem {
 
     String user_name;
@@ -111,7 +110,6 @@ public class UserItem {
     }
     
 }
-
 ```
 
 ```
@@ -150,8 +148,8 @@ public class UserAdapter extends RecyclerView.Adapter<FilterAdapter.ExampleViewH
 
         final UserItem user = mList.get(position);
 
-        holder.tvUser_name.setText(currentItem.getUser_name());
-        holder.tvUser_id.setText(currentItem.getUser_id());
+        holder.tvUser_name.setText(user.getUser_name());
+        holder.tvUser_id.setText(user.getUser_id());
     }
 
     @Override
