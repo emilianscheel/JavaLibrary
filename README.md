@@ -1,12 +1,12 @@
 # android-java-library
 
 ## android java code examples
-* [Retrieving Firebase data list](#Firebase)
+* [Retrieving Firebase Data list into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
 
-## TextView
+## Retrieving-Firebase-Data-in-Recyclerview
 This is for showing Firebase Realtime data in an android recyclerview.
 
-### Firebase
+### Firebase data list example
 
 ```
 TextView textview = findViewById(R.id.textview);
@@ -16,4 +16,3 @@ textview.setTextColor(Color.parseColor("#000"));
 textview.getLayoutParams.width = 50px;
 textview.getLayoutParams.height = 50px;
 ```
-### change parameters in xml
