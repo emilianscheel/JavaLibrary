@@ -6,7 +6,10 @@
 ## Retrieving-Firebase-data-in-Recyclerview
 This is for showing Firebase Realtime data in an android recyclerview.
 
-### Firebase data list example
+### 1. Connect your Firebase with your app 
+In Android Studio go to top menu bar to "Tools > Firebase". In the right site bar click "Realtime Database" and "Connect" it with your online Firebase account.
+
+### 2. Create Firebase user list example
 
 ![here_should_be_the_example](https://github.com/emilianscheel/android-java-library/blob/main/firebase-user-list-example.png)
 
