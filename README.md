@@ -10,7 +10,7 @@ This is for showing Firebase Realtime data in an android recyclerview.
 
 ![here_should_be_the_example](https://github.com/emilianscheel/android-java-library/blob/main/firebase-user-list-example.png)
 
-### Retrieve this into recyclerview with 
+### Retrieve this into recyclerview
 ```
 ArrayList<UserItem> mList = new ArrayList<>();
 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("user");
@@ -25,16 +25,16 @@ databaseReference.addValueEventListener(new ValueEventListener() {
 
         if (snapshot.hasChildren()) {
 
-        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-            final UserItem user = dataSnapshot.getValue(UserItem.class);
-            mList.add(user);
-        }
+                final UserItem user = dataSnapshot.getValue(UserItem.class);
+                mList.add(user);
+            }
 
         Adapter adapter = new Adapter(mList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-      }
+        }
     }
 
     @Override
