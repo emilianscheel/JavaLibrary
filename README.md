@@ -8,11 +8,4 @@ This is for showing Firebase Realtime data in an android recyclerview.
 
 ### Firebase data list example
 
-```
-TextView textview = findViewById(R.id.textview);
-
-textview.setText("Hello World!");
-textview.setTextColor(Color.parseColor("#000"));
-textview.getLayoutParams.width = 50px;
-textview.getLayoutParams.height = 50px;
-```
+![here_should_be_the_example](http://url/to/img.png)
