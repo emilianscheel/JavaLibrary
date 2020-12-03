@@ -1,7 +1,7 @@
-# android-view-library
+# android-java-library
 
-## android views and how to set up them programatically
-* [retrieve Firebase data to recyclerview](#retrieve Firebase data to recyclerview)
+## android java code examples
+* [Retrieving Firebase data list](#retrieve Firebase data to recyclerview)
 
 ## TextView
 This is for showing Firebase Realtime data in an android recyclerview.
