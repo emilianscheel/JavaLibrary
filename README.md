@@ -47,8 +47,8 @@ databaseReference.addValueEventListener(new ValueEventListener() {
 });
 ```
 
-### 4. Also copy the "Adapter Class" and "Item Class"
-Required is 
+### 4. Also copy the "Adapter Class", "Item Class" and the item resource file 
+Required for the Item Class is ...
 * a empty "Constructor" and a full "Constructor"
 * Getter and Setter for every String, Integer, Long, ...
 ```
@@ -112,5 +112,82 @@ public class UserItem {
     
 }
 
+```
+
+```
+public class UserAdapter extends RecyclerView.Adapter<FilterAdapter.ExampleViewHolder> {
+
+    Context context;    
+    ArrayList<UserItem> mList;
+    
+    public static class ExampleViewHolder extends RecyclerView.ViewHolder {
+    
+        public TextView tvUser_name;
+        public TextView tvUser_id;
+
+        public ExampleViewHolder(View itemView) {
+            super(itemView);
+
+            tvUser_name = itemView.findViewById(R.id.tvUserName);
+            tvUser_id = itemView.findViewById(R.id.tvUserId);
+         }
+    }
+
+    public FilterAdapter(Context context, ArrayList<UserItem> mList) {
+        this.context = context;
+        this.mList = mList;
+    }
+
+    @Override
+    public ExampleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_user, parent, false);
+        ExampleViewHolder evh = new ExampleViewHolder(v);
+        return evh;
+    }
+
+    @Override
+    public void onBindViewHolder(final ExampleViewHolder holder, final int position) {
+
+        final UserItem user = mList.get(position);
+
+        holder.tvUser_name.setText(currentItem.getUser_name());
+        holder.tvUser_id.setText(currentItem.getUser_id());
+    }
+
+    @Override
+    public int getItemCount() {
+        return mList.size();
+    }
+}
+
+```
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Jolix"
+            android:textColor="#000"
+            android:textSize="14dp" />
+            
+        <TextView
+            android:id="@+id/tvUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="032489203"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+</LinearLayout>
 ```
 
