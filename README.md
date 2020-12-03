@@ -1,4 +1,4 @@
-# android-java-library
+# Java Library
 
 ## android java code examples
 * [Retrieving Firebase Data list into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
