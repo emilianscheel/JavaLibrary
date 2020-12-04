@@ -47,7 +47,7 @@ databaseReference.addValueEventListener(new ValueEventListener() {
 });
 ```
 
-### 4. Also copy the "Adapter Class", "Item Class" and the item resource file 
+### 4. Also copy the "Adapter Class", "Item Class" and the item resource file
 Required for the Item Class is ...
 * a empty "Constructor" and a full "Constructor"
 * Getter and Setter for every String, Integer, Long, ...
@@ -189,5 +189,34 @@ public class UserAdapter extends RecyclerView.Adapter<FilterAdapter.ExampleViewH
 </LinearLayout>
 ```
 ## Snackbar
-This is for showing custo.
+This is for showing custom user messages.
 
+### 4. Java Example
+
+```
+int seconds = 2;
+
+Snackbar snackbar = Snackbar.make(view, "Hello World!", 1000 * seconds);
+View sbView = snackbar.getView();
+TextView textView = (TextView) sbView.findViewById(R.id.snackbar_text);
+
+// set font-family
+
+textView.setTypeface(ResourcesCompat.getFont(this, R.font.m));
+
+// set text-color
+
+textView.setTextColor(ContextCompat.getColor(this, R.color.white));
+
+// set icon drawable
+
+textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon, 0, 0, 0);            textView.setCompoundDrawablePadding(getResources().getDimensionPixelOffset(R.dimen.snack_bar_icon_padding));
+
+// set Snackbar background
+
+sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+
+// show Snackbar
+
+snackbar.show();
+```
