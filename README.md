@@ -15,7 +15,7 @@ In Android Studio go to top menu bar to "Tools > Firebase". In the right site ba
 ![here_should_be_the_example](https://github.com/emilianscheel/android-java-library/blob/main/firebase-user-list-example.png)
 
 ### 3. Copy this into your android application
-```
+```JAVA
 ArrayList<UserItem> mList = new ArrayList<>();
 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("user");
 RecylerView recyclerView = findViewById(R.id.recyclerview);
@@ -52,7 +52,7 @@ databaseReference.addValueEventListener(new ValueEventListener() {
 Required for the Item Class is ...
 * a empty "Constructor" and a full "Constructor"
 * Getter and Setter for every String, Integer, Long, ...
-```
+```JAVA
 public class UserItem {
 
     String user_name;
@@ -113,7 +113,7 @@ public class UserItem {
 }
 ```
 
-```
+```JAVA
 public class UserAdapter extends RecyclerView.Adapter<FilterAdapter.ExampleViewHolder> {
 
     Context context;    
@@ -161,7 +161,7 @@ public class UserAdapter extends RecyclerView.Adapter<FilterAdapter.ExampleViewH
 
 ```
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -194,7 +194,7 @@ This is for showing custom user messages.
 
 ### 4. Java Example
 
-```
+```JAVA
 int seconds = 2;
 
 Snackbar snackbar = Snackbar.make(view, "Hello World!", 1000 * seconds);
@@ -224,7 +224,8 @@ snackbar.show();
 
 ## Open other app with package name
 This is for opening an other installed app from your app.
-```
+
+```JAVA
 String package_name = "com.package.name";
 
 Intent intent = getPackageManager().getLaunchIntentForPackage(package_name);
