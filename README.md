@@ -3,7 +3,7 @@
 * [Retrieving Firebase realtime  into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
 * [How to start other app just with package name?](#How-to-start-other-app-just-with-package-name)
 * [How to create SnackBar?](#Snackbar)
-* [How to check internet connection?](#How-to-check-internet-connection?)
+* [How to check internet connection?](#How-to-check-internet-connection)
 
 ## Retrieving-Firebase-data-in-Recyclerview
 This is for showing Firebase Realtime data in an android recyclerview.
@@ -249,7 +249,7 @@ startActivity(intent);
 ## How to check internet connection?
 
 Create this ```isWifiConnected(this)``` method.
-```
+```JAVA
 public Boolean isWifiConnected(Context context) {
         
     try {
@@ -272,7 +272,7 @@ public Boolean isWifiConnected(Context context) {
 }
 ```
 How to use it?
-```
+```JAVA
 if (isWifiConnected()) {
 
     // do something
