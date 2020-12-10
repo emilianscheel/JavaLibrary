@@ -1,8 +1,9 @@
 # Java Library
 
 * [Retrieving Firebase realtime  into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
-* [Open other app with package name](#Open-other-app-with-package-name)
-* [How to create SnackBar message?](#Snackbar)
+* [How to start other app just with package name?](#How-to-start-other-app-just-with-package-name)
+* [How to create SnackBar?](#Snackbar)
+* [How to check internet connection?](#How-to-check-internet-connection?)
 
 ## Retrieving-Firebase-data-in-Recyclerview
 This is for showing Firebase Realtime data in an android recyclerview.
@@ -222,7 +223,7 @@ sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
 snackbar.show();
 ```
 
-## How to open other app with package name
+## How to start other app just with package name?
 This is for opening an other installed app from your app.
 
 ```JAVA
@@ -247,3 +248,30 @@ Intent intent = getPackageManager().getLaunchIntentForPackage(package_name);
     
 startActivity(intent);
 ```
+## How to check internet connection?
+Check if wifi is connected.
+
+### 1. Create this ```isWifiConnected() ``` method.
+```
+public Boolean isWifiConnected(Context context) {
+        
+    try {
+            
+         // Todo ---> check if internet isConnected
+            
+         ConnectivityManager cm = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+         NetworkInfo nInfo = cm.getActiveNetworkInfo();
+         Boolean isConnected = nInfo != null && nInfo.isAvailable() && nInfo.isConnected();
+         return isConnected;
+            
+    } catch (Exception e) {
+            
+         // Todo ---> There is no internet connectivity
+           
+         Log.e("Connectivity Exception", e.getMessage());
+
+         return false;
+    }
+}
+```
+
