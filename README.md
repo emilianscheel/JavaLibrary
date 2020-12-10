@@ -4,6 +4,8 @@
 * [Retrieving Firebase Data list into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
 * [Open other app with package name](#Open-other-app-with-package-name)
 
+* [Open other app with package name](#Open-other-app-with-package-name)
+
 ## Retrieving-Firebase-data-in-Recyclerview
 This is for showing Firebase Realtime data in an android recyclerview.
 
