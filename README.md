@@ -1,6 +1,6 @@
 # Java Library
 
-* [Retrieving Firebase realtime  into an recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
+* [How to retrieve Firebase Realtime data into a recyclerview](#Retrieving-Firebase-Data-in-Recyclerview)
 * [How to start other app just with package name?](#How-to-start-other-app-just-with-package-name)
 * [How to create SnackBar?](#Snackbar)
 * [How to check internet connection?](#How-to-check-internet-connection)
