@@ -222,7 +222,7 @@ sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
 snackbar.show();
 ```
 
-## Open other app with package name
+## How to open other app with package name
 This is for opening an other installed app from your app.
 
 ```JAVA
@@ -230,19 +230,20 @@ String package_name = "com.package.name";
 
 Intent intent = getPackageManager().getLaunchIntentForPackage(package_name);
 
-        if (intent != null) {
+    if (intent != null) {
         
-            // Packe exits  --->  open this app
+        // Packe exits  --->  open this app
 
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        } else {
+    } else {
         
-            // Package doesnt exits  --->  open this package in Play Store
+        // Package doesnt exits  --->  open this package in Play Store
             
-            intent = new Intent(Intent.ACTION_VIEW);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + package_name));
-        }
-        startActivity(intent);
+        intent = new Intent(Intent.ACTION_VIEW);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + package_name));
+    }
+    
+startActivity(intent);
 ```
