@@ -224,8 +224,6 @@ snackbar.show();
 ```
 
 ## How to start other app just with package name?
-This is for opening an other installed app from your app.
-
 ```JAVA
 String package_name = "com.package.name";
 
@@ -249,9 +247,8 @@ Intent intent = getPackageManager().getLaunchIntentForPackage(package_name);
 startActivity(intent);
 ```
 ## How to check internet connection?
-Check if wifi is connected.
 
-### 1. Create this ```isWifiConnected() ``` method.
+Create this ```isWifiConnected(this)``` method.
 ```
 public Boolean isWifiConnected(Context context) {
         
@@ -274,4 +271,14 @@ public Boolean isWifiConnected(Context context) {
     }
 }
 ```
+How to use it?
+```
+if (isWifiConnected()) {
+
+    // do something
+    
+} else {
+
+   // do something
+}
 
